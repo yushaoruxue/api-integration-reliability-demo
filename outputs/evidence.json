@@ -1,0 +1,32 @@
+{
+  "malformed_envelope": {
+    "error_ledger": [],
+    "summary": {"bounded_retries":0,"contact_api_calls":2,"duplicate_skipped":0,"error":"malformed_envelope page=2","final_dataset_hash":"f5a6bbdc60a5cc7f6f54b679fb41f33050120d9825981d839513571e43fb616f","final_local_rows":5,"inserted":5,"malformed_rejected":0,"never_seen_inactive_filtered":0,"scenario":"malformed_envelope","status":"FAILED","token_refresh_count":0,"unchanged":0,"updated":0},
+    "trace": [{"attempt":1,"event":"response_ok","page":1}]
+  },
+  "permanent_503": {
+    "error_ledger": [],
+    "summary": {"bounded_retries":2,"contact_api_calls":4,"duplicate_skipped":0,"error":"http_503 page=2","final_dataset_hash":"f5a6bbdc60a5cc7f6f54b679fb41f33050120d9825981d839513571e43fb616f","final_local_rows":5,"inserted":5,"malformed_rejected":0,"never_seen_inactive_filtered":0,"scenario":"permanent_503","status":"FAILED","token_refresh_count":0,"unchanged":0,"updated":0},
+    "trace": [{"attempt":1,"event":"response_ok","page":1},{"attempt":1,"event":"http_503","page":2},{"attempt":2,"event":"http_503","page":2},{"attempt":3,"event":"http_503","page":2}]
+  },
+  "v1_first_run": {
+    "error_ledger": [{"index":4,"page":3,"reason":"missing_required_field"}],
+    "summary": {"bounded_retries":3,"contact_api_calls":6,"duplicate_skipped":1,"error":null,"final_dataset_hash":"ead51592b2363a0da42d890a910adb663267fb55aac2d07713e688a3260db764","final_local_rows":11,"inserted":11,"malformed_rejected":1,"never_seen_inactive_filtered":0,"scenario":"v1","status":"SUCCESS","token_refresh_count":1,"unchanged":0,"updated":0},
+    "trace": [{"attempt":1,"event":"response_ok","page":1},{"attempt":1,"event":"http_401","page":2},{"attempt":1,"event":"token_refreshed","page":2},{"attempt":2,"event":"http_429","page":2},{"attempt":3,"event":"response_ok","page":2},{"attempt":1,"event":"timeout","page":3},{"attempt":2,"event":"response_ok","page":3}]
+  },
+  "v1_rerun": {
+    "error_ledger": [{"index":4,"page":3,"reason":"missing_required_field"}],
+    "summary": {"bounded_retries":3,"contact_api_calls":6,"duplicate_skipped":1,"error":null,"final_dataset_hash":"ead51592b2363a0da42d890a910adb663267fb55aac2d07713e688a3260db764","final_local_rows":11,"inserted":0,"malformed_rejected":1,"never_seen_inactive_filtered":0,"scenario":"v1","status":"SUCCESS","token_refresh_count":1,"unchanged":11,"updated":0},
+    "trace": [{"attempt":1,"event":"response_ok","page":1},{"attempt":1,"event":"http_401","page":2},{"attempt":1,"event":"token_refreshed","page":2},{"attempt":2,"event":"http_429","page":2},{"attempt":3,"event":"response_ok","page":2},{"attempt":1,"event":"timeout","page":3},{"attempt":2,"event":"response_ok","page":3}]
+  },
+  "v2_first_run": {
+    "error_ledger": [{"index":6,"page":3,"reason":"missing_required_field"}],
+    "summary": {"bounded_retries":3,"contact_api_calls":6,"duplicate_skipped":1,"error":null,"final_dataset_hash":"c9926d396cabccf69b591c87e8fa90600dec6be1237acd193c9ce5fd88020447","final_local_rows":12,"inserted":1,"malformed_rejected":1,"never_seen_inactive_filtered":1,"scenario":"v2","status":"SUCCESS","token_refresh_count":1,"unchanged":9,"updated":2},
+    "trace": [{"attempt":1,"event":"response_ok","page":1},{"attempt":1,"event":"http_401","page":2},{"attempt":1,"event":"token_refreshed","page":2},{"attempt":2,"event":"http_429","page":2},{"attempt":3,"event":"response_ok","page":2},{"attempt":1,"event":"timeout","page":3},{"attempt":2,"event":"response_ok","page":3}]
+  },
+  "v2_rerun": {
+    "error_ledger": [{"index":6,"page":3,"reason":"missing_required_field"}],
+    "summary": {"bounded_retries":3,"contact_api_calls":6,"duplicate_skipped":1,"error":null,"final_dataset_hash":"c9926d396cabccf69b591c87e8fa90600dec6be1237acd193c9ce5fd88020447","final_local_rows":12,"inserted":0,"malformed_rejected":1,"never_seen_inactive_filtered":1,"scenario":"v2","status":"SUCCESS","token_refresh_count":1,"unchanged":12,"updated":0},
+    "trace": [{"attempt":1,"event":"response_ok","page":1},{"attempt":1,"event":"http_401","page":2},{"attempt":1,"event":"token_refreshed","page":2},{"attempt":2,"event":"http_429","page":2},{"attempt":3,"event":"response_ok","page":2},{"attempt":1,"event":"timeout","page":3},{"attempt":2,"event":"response_ok","page":3}]
+  }
+}
