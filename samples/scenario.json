@@ -1,0 +1,59 @@
+{
+  "v1_pages": {
+    "1": [
+      {"contact_id":"c001","name":"Ava Chen","email":"ava@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:00:00Z"},
+      {"contact_id":"c002","name":"Ben Ortiz","email":"ben@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:01:00Z"},
+      {"contact_id":"c003","name":"Cara Singh","email":"cara@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:02:00Z"},
+      {"contact_id":"c004","name":"Drew Kim","email":"drew@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:03:00Z"},
+      {"contact_id":"c005","name":"Eli Morgan","email":"eli@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:04:00Z"}
+    ],
+    "2": [
+      {"contact_id":"c006","name":"Faye Li","email":"faye@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:05:00Z"},
+      {"contact_id":"c007","name":"Gio Park","email":"gio@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:06:00Z"},
+      {"contact_id":"c008","name":"Hana Reed","email":"hana@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:07:00Z"},
+      {"contact_id":"c006","name":"Faye Li","email":"faye@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:05:00Z"}
+    ],
+    "3": [
+      {"contact_id":"c009","name":"Ivan Wells","email":"ivan@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:08:00Z"},
+      {"contact_id":"c010","name":"Juno Bell","email":"juno@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:09:00Z"},
+      {"contact_id":"c011","name":"Kai Ross","email":"kai@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:10:00Z"},
+      {"name":"Missing External ID","email":"bad@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:11:00Z"}
+    ]
+  },
+  "v2_pages": {
+    "1": [
+      {"contact_id":"c001","name":"Ava Chen","email":"ava@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:00:00Z"},
+      {"contact_id":"c002","name":"Ben Ortiz","email":"ben@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:01:00Z"},
+      {"contact_id":"c003","name":"Cara Singh","email":"cara@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:02:00Z"},
+      {"contact_id":"c004","name":"Drew Kim","email":"drew@example.test","status":"INACTIVE","updated_at":"2026-09-13T10:00:00Z"},
+      {"contact_id":"c005","name":"Eli Morgan","email":"eli@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:04:00Z"}
+    ],
+    "2": [
+      {"contact_id":"c006","name":"Faye Li","email":"faye@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:05:00Z"},
+      {"contact_id":"c007","name":"Gio Park","email":"gio.new@example.test","status":"ACTIVE","updated_at":"2026-09-13T10:01:00Z"},
+      {"contact_id":"c008","name":"Hana Reed","email":"hana@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:07:00Z"},
+      {"contact_id":"c006","name":"Faye Li","email":"faye@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:05:00Z"}
+    ],
+    "3": [
+      {"contact_id":"c009","name":"Ivan Wells","email":"ivan@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:08:00Z"},
+      {"contact_id":"c010","name":"Juno Bell","email":"juno@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:09:00Z"},
+      {"contact_id":"c011","name":"Kai Ross","email":"kai@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:10:00Z"},
+      {"contact_id":"c012","name":"Lina Gray","email":"lina@example.test","status":"INACTIVE","updated_at":"2026-09-13T10:02:00Z"},
+      {"contact_id":"c013","name":"Mika Stone","email":"mika@example.test","status":"ACTIVE","updated_at":"2026-09-13T10:03:00Z"},
+      {"name":"Missing External ID","email":"bad@example.test","status":"ACTIVE","updated_at":"2026-09-12T09:11:00Z"}
+    ]
+  },
+  "fault_plan": {
+    "success_path": [
+      "page 2 first request -> 401 expired access token",
+      "refresh token -> new access token",
+      "page 2 next request -> 429 with Retry-After: 0.02",
+      "page 3 first request -> timeout",
+      "bounded retry -> success"
+    ],
+    "failure_scenarios": {
+      "permanent_503": "page 2 returns 503 until retry budget is exhausted",
+      "malformed_envelope": "page 2 returns an invalid response envelope and the run stops"
+    }
+  }
+}
