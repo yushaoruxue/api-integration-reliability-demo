@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111817"/>
+  <text x="64" y="78" fill="#e8f0ed" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">API Integration Reliability Proof</text>
+  <text x="64" y="118" fill="#9fb4ad" font-family="Arial, Helvetica, sans-serif" font-size="20">Synthetic OAuth-style paginated sync · explicit failure behavior · reproducible verification</text>
+  <rect x="64" y="165" width="1072" height="126" rx="16" fill="#1b2522" stroke="#32443e"/>
+  <text x="90" y="207" fill="#b7f7d3" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">SUCCESS PATH</text>
+  <text x="90" y="248" fill="#e8f0ed" font-family="Arial, Helvetica, sans-serif" font-size="24">401 → token refresh → 429 / Retry-After → timeout → bounded retry → SUCCESS</text>
+  <text x="90" y="276" fill="#9fb4ad" font-family="Arial, Helvetica, sans-serif" font-size="18">6 API calls · 1 refresh · 3 retries · 11 valid contacts · 1 malformed rejected · 1 duplicate skipped</text>
+  <rect x="64" y="320" width="333" height="204" rx="16" fill="#1b2522" stroke="#32443e"/>
+  <text x="90" y="362" fill="#b7f7d3" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">IDEMPOTENT</text>
+  <text x="90" y="414" fill="#e8f0ed" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">0 inserts</text>
+  <text x="90" y="454" fill="#e8f0ed" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">0 updates</text>
+  <text x="90" y="492" fill="#9fb4ad" font-family="Arial, Helvetica, sans-serif" font-size="18">same data rerun · stable hash</text>
+  <rect x="433" y="320" width="333" height="204" rx="16" fill="#1b2522" stroke="#32443e"/>
+  <text x="459" y="362" fill="#b7f7d3" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">FAIL CLOSED</text>
+  <text x="459" y="414" fill="#e8f0ed" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700">503 → FAILED</text>
+  <text x="459" y="454" fill="#e8f0ed" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700">bad envelope → FAILED</text>
+  <text x="459" y="492" fill="#9fb4ad" font-family="Arial, Helvetica, sans-serif" font-size="18">partial work is not mislabeled success</text>
+  <rect x="802" y="320" width="334" height="204" rx="16" fill="#1b2522" stroke="#32443e"/>
+  <text x="828" y="362" fill="#b7f7d3" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">VERIFIED</text>
+  <text x="828" y="432" fill="#e8f0ed" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">22 / 22 PASS</text>
+  <text x="828" y="478" fill="#9fb4ad" font-family="Arial, Helvetica, sans-serif" font-size="18">public harness + committed outputs</text>
+  <text x="64" y="588" fill="#7f958e" font-family="Arial, Helvetica, sans-serif" font-size="17">Boundary: bounded read-oriented integrations; not vendor-specific production history, destructive writes, funds movement, or 24/7 operations.</text>
+</svg>
