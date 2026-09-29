@@ -1,0 +1,13 @@
+contact_id,name,email,status,updated_at
+c001,Ava Chen,ava@example.test,ACTIVE,2026-09-12T09:00:00Z
+c002,Ben Ortiz,ben@example.test,ACTIVE,2026-09-12T09:01:00Z
+c003,Cara Singh,cara@example.test,ACTIVE,2026-09-12T09:02:00Z
+c004,Drew Kim,drew@example.test,INACTIVE,2026-09-13T10:00:00Z
+c005,Eli Morgan,eli@example.test,ACTIVE,2026-09-12T09:04:00Z
+c006,Faye Li,faye@example.test,ACTIVE,2026-09-12T09:05:00Z
+c007,Gio Park,gio.new@example.test,ACTIVE,2026-09-13T10:01:00Z
+c008,Hana Reed,hana@example.test,ACTIVE,2026-09-12T09:07:00Z
+c009,Ivan Wells,ivan@example.test,ACTIVE,2026-09-12T09:08:00Z
+c010,Juno Bell,juno@example.test,ACTIVE,2026-09-12T09:09:00Z
+c011,Kai Ross,kai@example.test,ACTIVE,2026-09-12T09:10:00Z
+c013,Mika Stone,mika@example.test,ACTIVE,2026-09-13T10:03:00Z
